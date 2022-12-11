@@ -1,0 +1,188 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-family: "Quicksand", sans-serif;
+        overflow: hidden;
+}
+html {
+        font-size: 60%;
+        font-weight: 400;
+}
+.container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #181d31;
+}
+.form-wrapper {
+        background-color: #f0e9d2;
+        padding: 1rem 2rem;
+        width: 100rem;
+        height: 50rem;
+        border-radius: 3rem;
+        box-shadow: 1rem 1rem 6rem rgb(124, 123, 123);
+        position: relative;
+}
+
+.green-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(to right, #8ec3b0, #678983);
+        top: 0;
+        left: 0;
+        z-index: 50;
+        transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.container.active .green-bg {
+        width: 40%;
+}
+.green-bg button {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: transparent;
+        width: 16rem;
+        height: 5rem;
+        border: 0.1rem solid #f0e9d2;
+        border-radius: 3rem;
+        cursor: pointer;
+        color: #f0e9d2;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: all ease-in-out 0.3s;
+}
+.green-bg button:hover {
+        background: #f0e9d2;
+        color: #181d31;
+        border: none;
+}
+
+.banner {
+        position: absolute;
+        z-index: 100;
+        width: 30rem;
+        text-align: center;
+        top: 25%;
+        color: #f0e9d2;
+        cursor: default;
+        left: -35rem;
+        /* overflow: hidden; */
+        transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.container.active .banner {
+        left: 5rem;
+        /* overflow: hidden;  */
+}
+.banner h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+}
+.banner p {
+        font-size: 2rem;
+}
+.singup-form {
+        position: absolute;
+        top: 0;
+        left: 0rem;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 5rem 0;
+        transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.container.active .singup-form {
+        left: 45rem;
+}
+.singup-form h1 {
+        font-size: 3rem;
+        color: #8ec3b0;
+        margin-bottom: 2rem;
+}
+.social-media {
+        display: flex;
+}
+
+.social-media i {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        border: 0.1rem solid #555;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        color: #777;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.social-media i:hover {
+        border: none;
+        color: #181d31;
+        background-color: #8ec3b0;
+}
+.singup-form p {
+        font-size: 1.8rem;
+        color: #777;
+        margin-bottom: 2rem;
+}
+.input-group {
+        position: relative;
+}
+.input-group input {
+        width: 30rem;
+        height: 5rem;
+        padding: 1rem 1rem 1rem 3rem;
+        border: none;
+        background-color: #d8d3c5;
+        border-radius: 0.5rem;
+        color: #181d31;
+        font-size: 1.8rem;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.input-group input:hover {
+        border: 0.2rem solid #8ec3b0;
+}
+.input-group input:focus {
+        border: 0.2rem solid #181d31;
+}
+.input-group input::placeholder {
+        color: #181d31;
+        font-size: 1.5rem;
+}
+.input-group i {
+        position: absolute;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.5rem;
+        font-size: 1.8rem;
+        color: #181d31;
+}
+.singup-form button {
+        width: 16rem;
+        height: 5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 3rem;
+        background-color: #8ec3b0;
+        margin-top: 3rem;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+}
+.singup-form button:hover {
+        background-color: #181d31;
+        color: #8ec3b0;
+}
