@@ -1,0 +1,132 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+}
+:root {
+        --container-bg-color: #eee8e1;
+        --card-bg-color: #ecf0f1;
+        --font-color: #777;
+        --font-clor-2: #111;
+        --shadow: rgba(0, 0, 0, 0.4);
+}
+body.dark {
+        --container-bg-color: #2f3542;
+        --card-bg-color: #57606f;
+        --font-color: #ced6e0;
+        --font-clor-2: #ffffff;
+        --shadow: rgba(0, 0, 0, 0.4);
+}
+
+body {
+        overflow-x: hidden;
+}
+
+html {
+        font-size: 10px;
+}
+.container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 7rem;
+        background-color: var(--container-bg-color);
+}
+.toggle {
+        width: 6rem;
+        height: 6rem;
+        background-color: var(--card-bg-color);
+        top: 7rem;
+        right: 7rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        align-self: flex-end;
+}
+.toggle i {
+        font-size: 4rem;
+        color: var(--font-color);
+}
+.row {
+        align-self: center;
+        margin-top: 5rem;
+        padding: 3rem 0;
+}
+.card {
+        width: 48rem;
+        height: 25rem;
+        box-shadow: 1rem 1rem 3rem var(--shadow);
+        border-radius: 2rem;
+        position: relative;
+}
+.left {
+        width: 70%;
+        height: 100%;
+        padding: 1rem 0 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: var(--font-color);
+}
+.map {
+        width: 35rem;
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+        z-index: 10;
+}
+.chip {
+        width: 6rem;
+}
+.name-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--font-color);
+}
+.NO {
+        font-size: 2.2rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        color: var(--font-clor-2);
+}
+.left p {
+        font-size: 1.6rem;
+        color: var(--font-color);
+}
+.date {
+        color: var(--font-clor-2);
+        font-family: 1.6rem;
+}
+.name {
+        font-size: 1.8rem;
+        color: var(--font-clor-2);
+}
+.logo {
+        align-self: flex-end;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 2rem;
+        right: 2rem;
+}
+.orange-cricle,
+.red-cricle {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+}
+.red-cricle {
+        background-color: red;
+        transform: translateX(20%);
+        opacity: 0.8;
+}
+.orange-cricle {
+        background-color: orange;
+        transform: translateX(-20%);
+        opacity: 0.8;
+}
